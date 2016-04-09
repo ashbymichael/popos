@@ -25,7 +25,11 @@ module ApplicationHelper
       distance = get_distance(:origin=>{lat: lat, long: long}, :destination=>{lat: popo.lat, long: popo.long})
       id_and_distance_array << {popo.id => distance}
     end
-    id_and_distance_array.sort_by! { |k| k.values[0] }
+    sorter(id_and_distance_array)
   end
-  
+
+  def sorter(array)
+    array.sort_by! { |k| k.values[0] }
+  end
+
 end
