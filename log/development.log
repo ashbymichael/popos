@@ -160,3 +160,1242 @@ Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 12:39:39 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 14:39:25 -0700
+
+ActiveRecord::NoDatabaseError (FATAL:  database "db/development" does not exist
+):
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:661:in `rescue in connect'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.0.2) lib/puma/configuration.rb:221:in `call'
+  puma (3.0.2) lib/puma/server.rb:561:in `handle_request'
+  puma (3.0.2) lib/puma/server.rb:406:in `process_client'
+  puma (3.0.2) lib/puma/server.rb:271:in `block in run'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `call'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `block in spawn_thread'
+
+
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.7ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (113.3ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (236.8ms)
+
+
+Started GET "/" for ::1 at 2016-04-09 14:41:28 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 1504ms (Views: 1488.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 14:41:30 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 14:41:30 -0700
+
+
+Started GET "/assets/styles.self-4739b827f26418359116c2c64aca050695b3ba595a32bf912a582906e6c1b7cd.css?body=1" for ::1 at 2016-04-09 14:41:30 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 14:41:30 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 14:41:30 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 14:41:30 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 14:41:30 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 14:41:30 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 14:56:40 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 302ms (Views: 295.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 14:56:41 -0700
+
+
+Started GET "/assets/styles.self-4739b827f26418359116c2c64aca050695b3ba595a32bf912a582906e6c1b7cd.css?body=1" for ::1 at 2016-04-09 14:56:41 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 14:56:41 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 14:56:41 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 14:56:41 -0700
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 14:56:41 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 14:56:41 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 14:56:41 -0700
+
+
+Started GET "/POPOS_.jpg" for ::1 at 2016-04-09 14:56:41 -0700
+
+ActionController::RoutingError (No route matches [GET] "/POPOS_.jpg"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.0.2) lib/puma/configuration.rb:221:in `call'
+  puma (3.0.2) lib/puma/server.rb:561:in `handle_request'
+  puma (3.0.2) lib/puma/server.rb:406:in `process_client'
+  puma (3.0.2) lib/puma/server.rb:271:in `block in run'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `call'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `block in spawn_thread'
+
+
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (55.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (192.0ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (115.2ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (217.6ms)
+
+
+Started GET "/" for ::1 at 2016-04-09 14:58:25 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 73ms (Views: 70.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 14:58:25 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 14:58:25 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 14:58:25 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 14:58:25 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 14:58:25 -0700
+
+
+Started GET "/assets/styles.self-4739b827f26418359116c2c64aca050695b3ba595a32bf912a582906e6c1b7cd.css?body=1" for ::1 at 2016-04-09 14:58:25 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 14:58:25 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 14:58:25 -0700
+
+
+Started GET "/images/POPOS_.jpg" for ::1 at 2016-04-09 14:58:25 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/POPOS_.jpg"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.0.2) lib/puma/configuration.rb:221:in `call'
+  puma (3.0.2) lib/puma/server.rb:561:in `handle_request'
+  puma (3.0.2) lib/puma/server.rb:406:in `process_client'
+  puma (3.0.2) lib/puma/server.rb:271:in `block in run'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `call'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `block in spawn_thread'
+
+
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (102.2ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.9ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (172.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-09 14:58:58 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 14:58:58 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 14:58:58 -0700
+
+
+Started GET "/assets/styles.self-4739b827f26418359116c2c64aca050695b3ba595a32bf912a582906e6c1b7cd.css?body=1" for ::1 at 2016-04-09 14:58:58 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 14:58:58 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 14:58:58 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 14:58:58 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 14:58:58 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 14:58:58 -0700
+
+
+Started GET "/images/POPOS_.jpg" for ::1 at 2016-04-09 14:58:58 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/POPOS_.jpg"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.0.2) lib/puma/configuration.rb:221:in `call'
+  puma (3.0.2) lib/puma/server.rb:561:in `handle_request'
+  puma (3.0.2) lib/puma/server.rb:406:in `process_client'
+  puma (3.0.2) lib/puma/server.rb:271:in `block in run'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `call'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `block in spawn_thread'
+
+
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (92.2ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.7ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (146.2ms)
+
+
+Started GET "/" for ::1 at 2016-04-09 14:59:20 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 14:59:20 -0700
+
+
+Started GET "/assets/styles.self-4739b827f26418359116c2c64aca050695b3ba595a32bf912a582906e6c1b7cd.css?body=1" for ::1 at 2016-04-09 14:59:20 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 14:59:20 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 14:59:20 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 14:59:20 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 14:59:20 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 14:59:20 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 14:59:20 -0700
+
+
+Started GET "/images/POPOS_.jpg" for ::1 at 2016-04-09 14:59:20 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/POPOS_.jpg"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.0.2) lib/puma/configuration.rb:221:in `call'
+  puma (3.0.2) lib/puma/server.rb:561:in `handle_request'
+  puma (3.0.2) lib/puma/server.rb:406:in `process_client'
+  puma (3.0.2) lib/puma/server.rb:271:in `block in run'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `call'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `block in spawn_thread'
+
+
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (93.0ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (61.7ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (139.2ms)
+
+
+Started GET "/" for ::1 at 2016-04-09 14:59:27 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 14:59:27 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 14:59:27 -0700
+
+
+Started GET "/assets/styles.self-4739b827f26418359116c2c64aca050695b3ba595a32bf912a582906e6c1b7cd.css?body=1" for ::1 at 2016-04-09 14:59:28 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 14:59:28 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 14:59:28 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 14:59:28 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 14:59:28 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 14:59:28 -0700
+
+
+Started GET "/POPOS_.jpg" for ::1 at 2016-04-09 14:59:28 -0700
+
+ActionController::RoutingError (No route matches [GET] "/POPOS_.jpg"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.0.2) lib/puma/configuration.rb:221:in `call'
+  puma (3.0.2) lib/puma/server.rb:561:in `handle_request'
+  puma (3.0.2) lib/puma/server.rb:406:in `process_client'
+  puma (3.0.2) lib/puma/server.rb:271:in `block in run'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `call'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `block in spawn_thread'
+
+
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (85.3ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (58.2ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (128.4ms)
+
+
+Started GET "/" for ::1 at 2016-04-09 14:59:33 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 14:59:33 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 14:59:33 -0700
+
+
+Started GET "/assets/styles.self-4739b827f26418359116c2c64aca050695b3ba595a32bf912a582906e6c1b7cd.css?body=1" for ::1 at 2016-04-09 14:59:33 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 14:59:33 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 14:59:33 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 14:59:33 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 14:59:33 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 14:59:33 -0700
+
+
+Started GET "/POPOS_.jpg" for ::1 at 2016-04-09 14:59:33 -0700
+
+ActionController::RoutingError (No route matches [GET] "/POPOS_.jpg"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.0.2) lib/puma/configuration.rb:221:in `call'
+  puma (3.0.2) lib/puma/server.rb:561:in `handle_request'
+  puma (3.0.2) lib/puma/server.rb:406:in `process_client'
+  puma (3.0.2) lib/puma/server.rb:271:in `block in run'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `call'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `block in spawn_thread'
+
+
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (84.9ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (10.5ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.0ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (163.3ms)
+
+
+Started GET "/" for ::1 at 2016-04-09 15:01:13 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (125.8ms)
+Completed 200 OK in 165ms (Views: 163.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:01:13 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:01:13 -0700
+
+
+Started GET "/assets/styles.self-4739b827f26418359116c2c64aca050695b3ba595a32bf912a582906e6c1b7cd.css?body=1" for ::1 at 2016-04-09 15:01:13 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:01:13 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:01:13 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:01:13 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:01:13 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:01:13 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:01:13 -0700
+
+
+Started GET "/assets/material.min.js.map" for ::1 at 2016-04-09 15:01:20 -0700
+
+ActionController::RoutingError (No route matches [GET] "/assets/material.min.js.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.0.2) lib/puma/configuration.rb:221:in `call'
+  puma (3.0.2) lib/puma/server.rb:561:in `handle_request'
+  puma (3.0.2) lib/puma/server.rb:406:in `process_client'
+  puma (3.0.2) lib/puma/server.rb:271:in `block in run'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `call'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `block in spawn_thread'
+
+
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (106.7ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (93.9ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Ben/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (216.9ms)
+
+
+Started GET "/" for ::1 at 2016-04-09 15:04:58 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 114ms (Views: 113.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:04:58 -0700
+
+
+Started GET "/assets/styles.self-031cf9fb9acac1a03f5361c8215fe5f3ba325ea528f147ff27abf5de0f9dfb00.css?body=1" for ::1 at 2016-04-09 15:04:58 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:04:58 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:04:58 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:04:58 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:04:58 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:04:58 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:04:58 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:04:58 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 15:05:00 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:05:00 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:05:00 -0700
+
+
+Started GET "/assets/styles.self-031cf9fb9acac1a03f5361c8215fe5f3ba325ea528f147ff27abf5de0f9dfb00.css?body=1" for ::1 at 2016-04-09 15:05:00 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:05:00 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:05:00 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:05:00 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:05:00 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:05:00 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:05:00 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 15:05:24 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:05:24 -0700
+
+
+Started GET "/assets/styles.self-a73da5d5e76f58d888ce5ed0562509c9cc9737f4fc4c5b8b75dbff0fdaf1ab8a.css?body=1" for ::1 at 2016-04-09 15:05:24 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:05:25 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:05:25 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:05:25 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:05:25 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:05:25 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:05:25 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:05:25 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 15:05:44 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/styles.self-3be9eeedc4c9379dad225c34277666e39b1fcf69ea8a89f2ba0e6e1056d9d701.css?body=1" for ::1 at 2016-04-09 15:05:44 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:05:44 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:05:44 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:05:44 -0700
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:05:44 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:05:44 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:05:44 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:05:44 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:05:44 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 15:06:01 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/styles.self-3b654c78ea200856bc6ff916a51bbe998248ff297fa2c3baa6dbbf727dcce9ef.css?body=1" for ::1 at 2016-04-09 15:06:01 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:06:01 -0700
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:06:01 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:06:01 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:06:01 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:06:01 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:06:01 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:06:01 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:06:01 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 15:08:21 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:08:21 -0700
+
+
+Started GET "/assets/styles.self-9140cf843d89c7a6a258223e5f195ddcdc024b761f5421d7cb97d12e6275714a.css?body=1" for ::1 at 2016-04-09 15:08:21 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:08:21 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:08:21 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:08:21 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:08:21 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:08:21 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:08:21 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:08:21 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 15:08:29 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/styles.self-71186302143bd53e1c9bf4d146db6989833cf4d58c558518930ea6812caeee33.css?body=1" for ::1 at 2016-04-09 15:08:29 -0700
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:08:29 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:08:29 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:08:29 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:08:29 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:08:29 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:08:29 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:08:29 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:08:29 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 15:08:38 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 46ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:08:38 -0700
+
+
+Started GET "/assets/styles.self-5939348ba8249fe1dccea5882d7cdbe2d8055189901bde45f66a93cb8590a122.css?body=1" for ::1 at 2016-04-09 15:08:38 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:08:38 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:08:38 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:08:38 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:08:38 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:08:38 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:08:38 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:08:38 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 15:08:45 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/styles.self-58d34c6a2de87ad4c92b3100fdae04275983166c6e8b2adedbf6992dff34e1d9.css?body=1" for ::1 at 2016-04-09 15:08:45 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:08:45 -0700
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:08:45 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:08:45 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:08:45 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:08:45 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:08:45 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:08:45 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:08:45 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 15:09:53 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 67ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:09:54 -0700
+
+
+Started GET "/assets/styles.self-1f260ec33765ec55c7dfb6be78b4cc546b5122022e24c8f7ffcfcab7b90199a5.css?body=1" for ::1 at 2016-04-09 15:09:54 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:09:54 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:09:54 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:09:54 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:09:54 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:09:54 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:09:54 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:09:54 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 15:10:03 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 44ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:10:03 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:10:03 -0700
+
+
+Started GET "/assets/styles.self-3636886ba864bf6db64e8f9e4dc5386101114285018b37f3d44804fba2d02ba7.css?body=1" for ::1 at 2016-04-09 15:10:03 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:10:03 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:10:03 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:10:03 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:10:03 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:10:03 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:10:03 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 15:10:11 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/styles.self-ab9923e8b37d555be5de3c27bf3d89da1216c811b06471d0d793b813b58c184c.css?body=1" for ::1 at 2016-04-09 15:10:12 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:10:12 -0700
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:10:12 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:10:12 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:10:12 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:10:12 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:10:12 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:10:12 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:10:12 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 15:10:17 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:10:17 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:10:17 -0700
+
+
+Started GET "/assets/styles.self-0c42137e28136c0f17edf2bada2cb39a0d4bf6f4d194d8c7323b94a82c6a2cc3.css?body=1" for ::1 at 2016-04-09 15:10:17 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:10:17 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:10:17 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:10:17 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:10:17 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:10:17 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:10:17 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 15:10:24 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 36ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:10:24 -0700
+
+
+Started GET "/assets/styles.self-92e845e26aca7db423f345b557eb2f0e57c580e2f0bdd5fc3a8721ddea96097a.css?body=1" for ::1 at 2016-04-09 15:10:24 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:10:24 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:10:24 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:10:24 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:10:24 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:10:24 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:10:24 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:10:24 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 15:10:30 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/styles.self-44e0b38c3f638b11e5503b47b9bc0d458a7031da334c8b5162e715cc9e7fdc91.css?body=1" for ::1 at 2016-04-09 15:10:30 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:10:30 -0700
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:10:30 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:10:30 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:10:30 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:10:30 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:10:30 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:10:30 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:10:30 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 15:10:36 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 46ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:10:36 -0700
+
+
+Started GET "/assets/styles.self-94e79b59c61335cb8489f96c0e8d0c2e659e0ff6543f79e87b6fafd715216174.css?body=1" for ::1 at 2016-04-09 15:10:36 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:10:37 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:10:37 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:10:37 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:10:37 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:10:37 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:10:37 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:10:37 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 15:11:08 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:11:08 -0700
+
+
+Started GET "/assets/styles.self-25e7b0739636e60e67360a495ace148a1bbaf4f9705d076b584b8125b12f88f0.css?body=1" for ::1 at 2016-04-09 15:11:08 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:11:08 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:11:08 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:11:08 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:11:08 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:11:08 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:11:08 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:11:08 -0700
+
+
+Started GET "/" for ::1 at 2016-04-09 15:11:22 -0700
+Processing by PoposController#welcome as HTML
+  Rendered popos/welcome.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 15:11:22 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-09 15:11:22 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-09 15:11:22 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-09 15:11:22 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-09 15:11:22 -0700
+
+
+Started GET "/assets/styles.self-4880f8e4578d6bf74e8498619c87dba6f093b8f012c8c7a16d1b8c328dc84ded.css?body=1" for ::1 at 2016-04-09 15:11:22 -0700
+
+
+Started GET "/assets/material.min.self-b745967604801584948b6bb8a81fb75eadf3b8c11e85b7813106420728c1bcce.js?body=1" for ::1 at 2016-04-09 15:11:22 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-09 15:11:22 -0700
+
+
+Started GET "/assets/POPOS_-aaf122f7fefd6b65bafde986d2d2e7da57b40daa0dfa2b7ee4376c32f2639452.jpg" for ::1 at 2016-04-09 15:11:22 -0700
