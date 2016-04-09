@@ -16,30 +16,6 @@ ActiveRecord::Schema.define(version: 20160409220539) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "cards", force: :cascade do |t|
-    t.string   "front"
-    t.string   "back"
-    t.datetime "due"
-    t.integer  "deck_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "interval"
-    t.float    "efactor"
-    t.integer  "repetition"
-    t.string   "status"
-  end
-
-  add_index "cards", ["deck_id"], name: "index_cards_on_deck_id", using: :btree
-
-  create_table "decks", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "decks", ["user_id"], name: "index_decks_on_user_id", using: :btree
-
   create_table "popos", force: :cascade do |t|
     t.string   "name"
     t.float    "lat"
@@ -53,14 +29,4 @@ ActiveRecord::Schema.define(version: 20160409220539) do
     t.datetime "updated_at",  null: false
     t.string   "location"
   end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "username"
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
-  add_foreign_key "cards", "decks"
-  add_foreign_key "decks", "users"
 end
