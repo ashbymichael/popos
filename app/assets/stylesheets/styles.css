@@ -2,3 +2,8 @@
   width: 85%;
   margin: 1rem auto;
 }
+
+.centered {
+  margin: 1rem auto;
+  display: block;
+}
