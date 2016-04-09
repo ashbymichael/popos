@@ -26,6 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #DOTENV for all the secrets
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 
+#HTTParty
+gem 'httparty', '~> 0.13.7'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
