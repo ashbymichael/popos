@@ -1,9 +1,0 @@
-
-
-Started GET "/" for ::1 at 2016-04-09 12:11:08 -0700
-Processing by PoposController#welcome as HTML
-  Rendered popos/welcome.html.erb within layouts/application (1.6ms)
-Completed 200 OK in 1339ms (Views: 1328.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/assets/material.min.self-48675a6149a471ebee3c066875554d472fb96fd34bf2661829c0eeece7287e7d.css?body=1" for ::1 at 2016-04-09 12:11:10 -0700
