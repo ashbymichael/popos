@@ -1,0 +1,9 @@
+<div class="container">
+  <%= form_tag import_path, multipart: true do %>
+    <%= label_tag 'file', 'Select a file:' %>
+    <%= file_field_tag 'file' %>
+    <div>
+      <%= button_tag 'Upload File', class: 'pure-button' %>
+    </div>
+  <% end %>
+</div>
