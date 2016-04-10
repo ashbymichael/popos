@@ -1,4 +1,6 @@
 class PoposController < ApplicationController
+  include ApplicationHelper
+
   def welcome
   end
 
@@ -15,5 +17,6 @@ class PoposController < ApplicationController
   end
 
   def index
+    @popos = sort_popos_by_distance
   end
 end
