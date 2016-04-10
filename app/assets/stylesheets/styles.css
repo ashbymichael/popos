@@ -23,14 +23,14 @@
 }
 
 #info-window {
-    min-height:40px;
+    min-height:50px;
     width:200px;
 }
 
 #info-window h1 {
-  font-size: 1em;
+  font-size: 3em;
 }
 
 #info-window img {
-  width: 25%;
+  width: 100%;
 }
