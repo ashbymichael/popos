@@ -6,4 +6,14 @@
     Button
   </button>
   <p id="current-location"></p>
+  <div style="height:75%; width:75%; position: absolute;">
+      <div id="map"></div>
+  </div>
 </div>
+
+<script id="info-window" type="text/x-handlebars-template">
+    <h1>{{name}}</h1>
+    <p>{{address}}</p>
+    <p>Hours: {{hours}}</p>
+    <p>{{description}}</p>
+</script>
