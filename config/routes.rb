@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   post '/import'       => 'popos#import'
   post '/search'       => 'popos#search'
   get  '/index'        => 'popos#index'
+
+  get '/markers' => 'popos#map_markers'
 end

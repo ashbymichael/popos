@@ -17,3 +17,20 @@
   margin-top: 10%;
   margin-left: 44%;
 }
+
+#map {
+    height: 100%;
+}
+
+#info-window {
+    min-height:40px;
+    width:200px;
+}
+
+#info-window h1 {
+  font-size: 1em;
+}
+
+#info-window img {
+  width: 25%;
+}
