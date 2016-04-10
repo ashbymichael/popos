@@ -23,13 +23,14 @@ module ApplicationHelper
 
     Popo.all.each do |popo|
       distance = get_distance(:origin=>{lat: lat, long: long}, :destination=>{lat: popo.lat, long: popo.long})
-      id_and_distance_array << {popo.id => distance}
+      id_and_distance_array << {popo => distance}
     end
-    sorter(id_and_distance_array)
+    id_and_distance_array.sort_by! { |k| k.values[0] }
+    extract_popos(id_and_distance_array)
   end
 
-  def sorter(array)
-    array.sort_by! { |k| k.values[0] }
+  def extract_popos(array)
+    array.map {|popo_hash| popo_hash.keys[0]}
   end
 
 end
