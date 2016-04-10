@@ -55,6 +55,11 @@ $(document).on("page:change", function () {
             var context = data;
             var html = template(context);
 
+            Handlebars.registerHelper('imageReformat', function(options) {
+               var re = /\s/g;
+               return new Handlebars.SafeString(options.fn(this).replace(re, '%20'));
+            });
+
             google.maps.event.addListener(marker, "click", function (e) {
                 infoWindow.setContent(html);
                 infoWindow.open(map, marker);
