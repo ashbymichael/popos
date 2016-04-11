@@ -1,1 +1,22 @@
-hello world
+<div class="container">
+  <div id="logo">
+    <%= image_tag "POPOS_.jpg" %>
+  </div>
+  <button id="get-location" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+    Button
+  </button>
+  <p id="current-location"></p>
+  <div style="height:75%; width:75%; position: absolute;">
+      <div id="map"></div>
+  </div>
+</div>
+
+<script id="info-window" type="text/x-handlebars-template">
+    <div id="info-window">
+    <h1>{{name}}</h1>
+    <p>{{address}}</p>
+    <p>Hours: {{hours}}</p>
+    <img src="http://sf-planning.org/ftp/files/GIS/POPOS/Pics/Small/{{#imageReformat}}{{image}}{{/imageReformat}}" alt="">
+    <p>{{description}}</p>
+    </div>
+</script>
