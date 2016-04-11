@@ -1,36 +1,37 @@
-.container {
-  width: 85%;
-  margin: 1rem auto;
-}
+      html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
 
-.centered {
-  margin: 1rem auto;
-  display: block;
+#get-location {
 }
 
 #logo {
-  margin-top: 10%;
-  margin-left: 35%;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
-#get-location {
-  margin-top: 10%;
-  margin-left: 44%;
+div#map {
+  height: 100%;
+  width: 100%;
+  margin-top: 100px;
 }
 
 #map {
-    height: 100%;
+  position: absolute;
 }
 
 #info-window {
-    min-height:50px;
-    width:200px;
-}
-
-#info-window h1 {
-  font-size: 3em;
+  min-height:50px;
+  width:300px;
 }
 
 #info-window img {
   width: 100%;
+}
+
+#loading {
+  display: none;
 }
