@@ -16,4 +16,5 @@
 //= require handlebars.js
 //= require google-maps
 //= require mui
-//= require_tree .
+//= require handlebars-app
+//= require welcome
