@@ -27,7 +27,6 @@ $(document).on("page:change", function () {
         var crd = pos.coords;
         userLat = crd.latitude;
         userLng = crd.longitude;
-        debugger;
     }
 
     var getUserLocationError = function (err) {
@@ -123,9 +122,7 @@ $(document).on("page:change", function () {
 
                 var distance = google.maps.geometry.spherical.computeDistanceBetween (userLatLng, popoLatLng);
 
-                console.log(distance*3.28084);
-
-                // debugger;
+                // console.log(distance*3.28084);
 
                 (function (marker, popo) {
                   var source   = $("#info-window-template").html();
