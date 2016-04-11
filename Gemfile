@@ -18,10 +18,13 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-google-maps'
   gem 'rails-assets-basscss'
   gem 'rails-assets-handlebars'
+  gem 'rails-assets-mui'
 end
 
 group :development, :test do
   gem 'byebug'
+  gem 'dbf'
+  gem 'awesome_print'
 end
 
 group :development do

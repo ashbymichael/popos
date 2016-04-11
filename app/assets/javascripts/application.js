@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require handlebars.js
 //= require google-maps
+//= require mui
 //= require_tree .

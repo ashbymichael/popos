@@ -38,6 +38,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
+    awesome_print (1.6.1)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -50,6 +51,7 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.1)
+    dbf (3.0.5)
     debug_inspector (0.0.2)
     dotenv (2.1.1)
     dotenv-rails (2.1.1)
@@ -103,6 +105,7 @@ GEM
     rails-assets-basscss (8.0.1)
     rails-assets-google-maps (3.2.1)
     rails-assets-handlebars (4.0.5)
+    rails-assets-mui (0.5.0)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -156,9 +159,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   bundler (>= 1.8.4)
   byebug
   coffee-rails (~> 4.1.0)
+  dbf
   dotenv-rails (~> 2.1, >= 2.1.1)
   httparty (~> 0.13.7)
   jbuilder (~> 2.0)
@@ -169,6 +174,7 @@ DEPENDENCIES
   rails-assets-basscss!
   rails-assets-google-maps!
   rails-assets-handlebars!
+  rails-assets-mui!
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
