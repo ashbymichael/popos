@@ -1,11 +1,5 @@
-      html, body {
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
 #get-location {
+  display: block;
 }
 
 #logo {
@@ -25,13 +19,33 @@ div#map {
 
 #info-window {
   min-height:50px;
-  width:300px;
+  width:350px;
 }
 
 #info-window img {
+  margin-top: 10px;
   width: 100%;
+}
+
+#info-window .title {
+  background-color: #277554;
+  color: white;
+  padding: 10px;
+}
+
+#info-window .popo-info {
+  padding: 0 10px;
 }
 
 #loading {
   display: none;
+}
+
+.gm-style-iw {
+ width: 350px !important;
+ top: 15px !important;
+ left: 0 !important;
+ background-color: #fff;
+ border-radius: 2px 2px 0 0;
+ box-shadow: 0 0 1px rgba(34, 25, 25, 0.4);
 }
