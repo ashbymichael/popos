@@ -26,27 +26,29 @@ def clean_year(val)
   val
 end
 
-popos = load_table("db/POPOS.dbf")
-popos.each do |record|
-  record.image
+def clean_image(img)
+  img.gsub!(/JPG/, "jpg")
 end
-# popos.each do |record|
-#   Popo.create!(
-#     name: record.name,
-#     lat: record.lattitue,
-#     lng: record.longitude,
-#     address: record.popos_addr,
-#     location_type: record.type,
-#     location: record.location,
-#     image: record.pic_file,
-#     description: record.descriptio,
-#     hours: record.hours,
-#     hours_type: record.hours_type,
-#     restrooms: record.restrooms,
-#     landscape: record.landscapin,
-#     accessibility: record.accessibil,
-#     year: clean_year(record.year),
-#     seating: clean_seating(record.seating),
-#     seating_description: record.seating_no
-#     )
-# end
+
+popos = load_table("db/POPOS.dbf")
+
+popos.each do |record|
+  Popo.create!(
+    name: record.name,
+    lat: record.lattitue,
+    lng: record.longitude,
+    address: record.popos_addr,
+    location_type: record.type,
+    location: record.location,
+    image: clean_image(record.pic_file),
+    description: record.descriptio,
+    hours: record.hours,
+    hours_type: record.hours_type,
+    restrooms: record.restrooms,
+    landscape: record.landscapin,
+    accessibility: record.accessibil,
+    year: clean_year(record.year),
+    seating: clean_seating(record.seating),
+    seating_description: record.seating_no
+    )
+end
