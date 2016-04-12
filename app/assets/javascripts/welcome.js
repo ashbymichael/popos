@@ -3,17 +3,21 @@ $(document).on("page:change", function () {
 
     var userLat,
         userLng,
-        map;
+        map,
+        infoWindow;
 
-    $("#loading").hide();
-    $(document).ajaxStart(function () {
-        $("#loading").show();
-    }).ajaxStop(function () {
-        $("#loading").hide();
-    });
-
+    // DOM Getters
     var button = document.getElementById("get-location");
     var mapDiv = document.getElementById("map");
+    var loading = $("#loading");
+
+    // Display loading while page loads
+    loading.hide();
+    $(document).ajaxStart(function () {
+        loading.show();
+    }).ajaxStop(function () {
+        loading.hide();
+    });
 
     var getUserLocation = function () {
         if (navigator.geolocation) {
@@ -103,7 +107,7 @@ $(document).on("page:change", function () {
 
         req.done(function (data) {
             var popos = data;
-            var infoWindow = new google.maps.InfoWindow();
+            infoWindow = new google.maps.InfoWindow();
 
             google.maps.event.addListener(infoWindow, 'domready', function() {
                 styleInfoWindow();
@@ -121,7 +125,6 @@ $(document).on("page:change", function () {
                 });
 
                 var distance = google.maps.geometry.spherical.computeDistanceBetween (userLatLng, popoLatLng);
-
                 // console.log(distance*3.28084);
 
                 (function (marker, popo) {
@@ -149,6 +152,9 @@ $(document).on("page:change", function () {
         initMap();
         getUserLocation();
         addPopoMarkersToMap();
+        google.maps.event.addListener(map, "click", function(event) {
+            infoWindow.close();
+        });
     });
 
     // button.addEventListener("click", getUserLocation);
