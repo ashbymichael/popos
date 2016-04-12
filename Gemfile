@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 gem 'httparty', '~> 0.13.7'
 gem 'puma'
+gem 'dbf'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-google-maps'
@@ -23,7 +24,6 @@ end
 
 group :development, :test do
   gem 'byebug'
-  gem 'dbf'
   gem 'awesome_print'
 end
 
