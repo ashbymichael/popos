@@ -1,34 +1,33 @@
 require 'dbf'
-require 'open-uri'
 
-def load_table(file_name)
-  DBF::Table.new(file_name)
-end
+module PoposDataCleaner
+  def load_table(file_name)
+    DBF::Table.new(file_name)
+  end
 
-def download_image(image_path, file_name)
-  open(file_name, 'wb') do |file|
-    file << open(image_path).read
+  def clean_seating(val)
+    if val == "N"
+      return 0
+    end
+
+    if val == "Y"
+      return 1
+    end
+  end
+
+  def clean_year(val)
+    return val.to_i unless val == nil
+    val
+  end
+
+  def clean_image(img)
+    img.gsub(/JPG/, "jpg")
   end
 end
 
-def clean_seating(val)
-  if val == "N"
-    return 0
-  end
 
-  if val == "Y"
-    return 1
-  end
-end
 
-def clean_year(val)
-  return val.to_i unless val == nil
-  val
-end
-
-def clean_image(img)
-  img.gsub!(/JPG/, "jpg")
-end
+include PoposDataCleaner
 
 popos = load_table("db/POPOS.dbf")
 
