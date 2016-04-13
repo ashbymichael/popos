@@ -11,7 +11,7 @@ module ApplicationHelper
   def get_distance(args = {})
     origin = args.fetch(:origin)
     destination = args.fetch(:destination)
-    res = HTTParty.post("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=#{origin[:lat]},#{origin[:long]}&destinations=#{destination[:lat]},#{destination[:long]}&key=AIzaSyCl5_4Ag_J7PW8yV-ps5ir0PMlt5a8Gp4A")
+    res = HTTParty.post("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=#{origin[:lat]},#{origin[:long]}&destinations=#{destination[:lat]},#{destination[:long]}&key=#{ENV['GOOGLE_KEY']}")
     res['rows'][0]['elements'][0]['distance']['text'][0..-4].to_f
   end
 
