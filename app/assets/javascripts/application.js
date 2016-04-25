@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require handlebars.js
+//= require google-maps
+//= require mui
+//= require handlebars-app
+//= require welcome
