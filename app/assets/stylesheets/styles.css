@@ -1,36 +1,51 @@
-.container {
-  width: 85%;
-  margin: 1rem auto;
-}
-
-.centered {
-  margin: 1rem auto;
+#get-location {
   display: block;
 }
 
 #logo {
-  margin-top: 10%;
-  margin-left: 35%;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
-#get-location {
-  margin-top: 10%;
-  margin-left: 44%;
+div#map {
+  height: 100%;
+  width: 100%;
+  margin-top: 100px;
 }
 
 #map {
-    height: 100%;
+  position: absolute;
 }
 
 #info-window {
-    min-height:50px;
-    width:200px;
-}
-
-#info-window h1 {
-  font-size: 3em;
+  min-height:50px;
+  width:350px;
 }
 
 #info-window img {
+  margin-top: 10px;
   width: 100%;
+}
+
+#info-window .title {
+  background-color: #277554;
+  color: white;
+  padding: 10px;
+}
+
+#info-window .popo-info {
+  padding: 0 10px;
+}
+
+#loading {
+  display: none;
+}
+
+.gm-style-iw {
+ width: 350px !important;
+ top: 15px !important;
+ left: 0 !important;
+ background-color: #fff;
+ border-radius: 2px 2px 0 0;
+ box-shadow: 0 0 1px rgba(34, 25, 25, 0.4);
 }
