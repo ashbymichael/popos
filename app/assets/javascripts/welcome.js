@@ -105,8 +105,10 @@ $(document).on("page:change", function () {
             dataType: "json"
         });
 
-        req.done(function (data) {
-            var popos = data;
+        req.done(function (popos) {
+            console.log('got popos');
+            // var popos = data;
+            console.log(popos[0]);
             infoWindow = new google.maps.InfoWindow();
 
             google.maps.event.addListener(infoWindow, 'domready', function() {
