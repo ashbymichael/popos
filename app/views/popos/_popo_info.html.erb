@@ -24,7 +24,10 @@
       <% if popo.accessibility.length > 0 %>
         <p><b>Accessibility:</b> <%= popo.accessibility %></p>
       <% end %>
-      <p><b>Description:</b><br><%= popo.description %></p>
+
+      <% if popo.description.length > 0 %>
+        <p><b>Description:</b><br><%= popo.description %></p>
+      <% end %>
 
     </div>
   </div>
