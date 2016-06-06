@@ -2,6 +2,7 @@ class PoposController < ApplicationController
   include ApplicationHelper
 
   def welcome
+    @popos = Popo.all
   end
 
   def upload
