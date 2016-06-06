@@ -64,6 +64,8 @@ $(document).on("page:change", function () {
       } else {
         $('#view-switcher-button').text('view as list');
       }
+      $('#map').toggle();
+      $('#list-view').toggle();
     }
 
     var styleInfoWindow = function() {
