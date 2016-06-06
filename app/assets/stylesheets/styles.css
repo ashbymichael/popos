@@ -1,3 +1,7 @@
+.debug {
+  border: 1px solid firebrick;
+}
+
 #get-location {
   display: block;
 }
@@ -10,7 +14,19 @@
 div#map {
   height: 100%;
   width: 100%;
-  margin-top: 100px;
+  /*margin-top: 100px;*/
+}
+
+#list-view {
+  height: 100%;
+  width: 90%;
+  max-width: 70rem;
+  margin: 0 auto;
+  min-height: 70rem;
+}
+
+.views-container {
+  padding-top: 6rem;
 }
 
 #map {
@@ -41,6 +57,10 @@ div#map {
   display: none;
 }
 
+#view-switcher-button {
+  display: block;
+  margin: 0 auto;
+}
 .gm-style-iw {
  width: 350px !important;
  top: 15px !important;
@@ -48,4 +68,25 @@ div#map {
  background-color: #fff;
  border-radius: 2px 2px 0 0;
  box-shadow: 0 0 1px rgba(34, 25, 25, 0.4);
+}
+
+.info-card {
+  margin: 1em;
+  border: 1px solid #aaa;
+  border-radius: .2em;
+  box-shadow: 0px 1px 4px 1px rgba(69,68,69,0.2);
+}
+
+.info-card-title {
+  background: #277554;
+  /*padding-top: 1em;*/
+  padding: 1em;
+}
+
+.info-card-title h1 {
+  margin-top: 0;
+}
+
+.popo-info {
+  padding: 1em;
 }

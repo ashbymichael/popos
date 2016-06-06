@@ -11,6 +11,8 @@ $(document).on("page:change", function () {
     var mapDiv = document.getElementById("map");
     var loading = $("#loading");
 
+
+
     // Display loading while page loads
     loading.hide();
     $(document).ajaxStart(function () {
@@ -51,6 +53,19 @@ $(document).on("page:change", function () {
             map: map,
             title: 'Current Position'
         });
+    }
+
+    var switchViews = function() {
+      console.log('switchViews inited');
+      var current = $('#view-switcher-button').text();
+      console.log('current: ' + current);
+      if (current === 'view as list') {
+        $('#view-switcher-button').text('view as map');
+      } else {
+        $('#view-switcher-button').text('view as list');
+      }
+      $('#map').toggle();
+      $('#list-view').toggle();
     }
 
     var styleInfoWindow = function() {
@@ -105,8 +120,7 @@ $(document).on("page:change", function () {
             dataType: "json"
         });
 
-        req.done(function (data) {
-            var popos = data;
+        req.done(function (popos) {
             infoWindow = new google.maps.InfoWindow();
 
             google.maps.event.addListener(infoWindow, 'domready', function() {
@@ -125,7 +139,6 @@ $(document).on("page:change", function () {
                 });
 
                 var distance = google.maps.geometry.spherical.computeDistanceBetween (userLatLng, popoLatLng);
-                // console.log(distance*3.28084);
 
                 (function (marker, popo) {
                   var source   = $("#info-window-template").html();
@@ -156,6 +169,9 @@ $(document).on("page:change", function () {
             infoWindow.close();
         });
     });
+
+    //Listeners
+    $('#view-switcher-button').click(switchViews);
 
     // button.addEventListener("click", getUserLocation);
 })

@@ -4,18 +4,55 @@
   </div>
   <h1>POPOS</h1>
   <p>Privately-Owned Public Open Space (POPOS) are publicly accessible spaces in forms of plazas, terraces, atriums, small parks, and even snippets which are provided and maintained by private developers. This site was created by our team using publicly available data during the Dev Bootcamp hack-a-thon. For more information, check out the <a href="http://sf-planning.org/privately-owned-public-open-space-and-public-art-popos">SF Planning Departments' page on POPOS</a></p>
-  <a href="#map" class="mui-btn mui-btn--primary">Find the POPOs</a>
+  <a href="#view-anchor" class="mui-btn mui-btn--primary">Find the POPOs</a>
 </div>
 
-<div>
+<div class="views-container">
+  <div><button class="mui-btn mui-btn--flat" id="view-switcher-button">view as list</button></div>
   <div id="loading" class="mui--text-center">
     Loading...
   </div>
-  <div id="map"></div>
+  <div id="view-anchor">
+    <div id="list-view" style="display:none">
+      <%= paginate @popos %>
+      <%= render 'popo_info' %>
+      <%= paginate @popos %>
+    </div>
+    <div id="map"></div>
+  </div>
 </div>
 
 <script id="info-window-template" type="text/x-handlebars-template">
   <div id="info-window">
+    <div class="title">
+      <h1>{{name}}
+      </h1>
+      <p>{{address}}</p>
+    </div>
+
+    <div class="popo-info">
+      {{#if image}}
+      <img src="http://sf-planning.org/ftp/files/GIS/POPOS/Pics/Small/{{image}}" alt="">
+      {{/if}}
+      <p>{{location_type}}, <i>{{location}}</i></p>
+      {{#if seating}}
+      <p><b>Seating: </b>Yes. {{seating_description}}</p>
+      {{/if}}
+      {{#if hours}}
+      <p><b>Hours:</b> {{hours}}</p>
+      {{else}}
+      <p><b>Hours:</b> {{hours_type}}</p>
+      {{/if}}
+      {{#if accessibility}}
+      <p><b>Accessibility:</b> {{accessibility}}</p>
+      {{/if}}
+      <p><b>Description:</b><br>{{description}}</p>
+    </div>
+  </div>
+</script>
+
+<script id="list-info-template" type="text/x-handlebars-template">
+  <div id="list-info">
     <div class="title">
       <h1>{{name}}
       </h1>

@@ -2,6 +2,7 @@ class PoposController < ApplicationController
   include ApplicationHelper
 
   def welcome
+    @popos = Popo.all.page(params[:page])
   end
 
   def upload
