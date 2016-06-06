@@ -11,6 +11,8 @@ $(document).on("page:change", function () {
     var mapDiv = document.getElementById("map");
     var loading = $("#loading");
 
+
+
     // Display loading while page loads
     loading.hide();
     $(document).ajaxStart(function () {
@@ -51,6 +53,17 @@ $(document).on("page:change", function () {
             map: map,
             title: 'Current Position'
         });
+    }
+
+    var switchViews = function() {
+      console.log('switchViews inited');
+      var current = $('#view-switcher-button').text();
+      console.log('current: ' + current);
+      if (current === 'view as list') {
+        $('#view-switcher-button').text('view as map');
+      } else {
+        $('#view-switcher-button').text('view as list');
+      }
     }
 
     var styleInfoWindow = function() {
@@ -154,6 +167,9 @@ $(document).on("page:change", function () {
             infoWindow.close();
         });
     });
+
+    //Listeners
+    $('#view-switcher-button').click(switchViews);
 
     // button.addEventListener("click", getUserLocation);
 })
