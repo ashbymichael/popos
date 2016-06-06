@@ -14,6 +14,7 @@ gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 gem 'httparty', '~> 0.13.7'
 gem 'puma'
 gem 'dbf'
+gem 'kaminari'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-google-maps'

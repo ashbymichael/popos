@@ -1,0 +1,31 @@
+<% @popos.each do |popo| %>
+  <div class="info-card">
+    <div class="info-card-title">
+      <h1><%= popo.name %></h1>
+      <p><%= popo.address %></p>
+    </div>
+
+    <div class="popo-info">
+      <% if popo.image %>
+        <img src="http://sf-planning.org/ftp/files/GIS/POPOS/Pics/Small/<%= popo.image %>" alt="">
+      <% end %>
+
+      <p><%= popo.location_type %>, <i><%= popo.location %></i></p>
+      <% if popo.seating %>
+        <p><b>Seating: </b>Yes. <%= popo.seating_description %></p>
+      <% end %>
+
+      <% if popo.hours %>
+        <p><b>Hours:</b> <%= popo.hours %></p>
+      <% else %>
+        <p><b>Hours:</b> <%= popo.hours_type %></p>
+      <% end %>
+
+      <% if popo.accessibility %>
+        <p><b>Accessibility:</b> <%= popo.accessibility %></p>
+      <% end %>
+      <p><b>Description:</b><br><%= popo.description %></p>
+
+    </div>
+  </div>
+<% end %>
