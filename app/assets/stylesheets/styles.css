@@ -10,7 +10,16 @@
 div#map {
   height: 100%;
   width: 100%;
-  margin-top: 100px;
+  /*margin-top: 100px;*/
+}
+
+#list-view {
+  height: 100%;
+  width: 100%;
+}
+
+.views-container {
+  padding-top: 6rem;
 }
 
 #map {
