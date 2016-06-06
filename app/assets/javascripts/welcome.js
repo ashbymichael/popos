@@ -106,9 +106,6 @@ $(document).on("page:change", function () {
         });
 
         req.done(function (popos) {
-            console.log('got popos');
-            // var popos = data;
-            console.log(popos[0]);
             infoWindow = new google.maps.InfoWindow();
 
             google.maps.event.addListener(infoWindow, 'domready', function() {
@@ -127,7 +124,6 @@ $(document).on("page:change", function () {
                 });
 
                 var distance = google.maps.geometry.spherical.computeDistanceBetween (userLatLng, popoLatLng);
-                // console.log(distance*3.28084);
 
                 (function (marker, popo) {
                   var source   = $("#info-window-template").html();
