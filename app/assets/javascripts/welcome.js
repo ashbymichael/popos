@@ -68,6 +68,15 @@ $(document).on("page:change", function () {
       $('#list-view').toggle();
     }
 
+    var viewPage = function(e) {
+      e.preventDefault();
+      $.ajax({
+        url: $(this).attr('href')
+      }).done(function(res){
+        $('#list-view').html($($.parseHTML(res)).filter('#list-view').html());
+      });
+    }
+
     var styleInfoWindow = function() {
           // Reference to the DIV which receives the contents of the infowindow using jQuery
           var iwOuter = $('.gm-style-iw');
@@ -172,6 +181,7 @@ $(document).on("page:change", function () {
 
     //Listeners
     $('#view-switcher-button').click(switchViews);
+    $(document.body).on('click', '.pagination a', viewPage);
 
     // button.addEventListener("click", getUserLocation);
 })

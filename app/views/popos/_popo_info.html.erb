@@ -15,16 +15,19 @@
         <p><b>Seating: </b>Yes. <%= popo.seating_description %></p>
       <% end %>
 
-      <% if popo.hours %>
+      <% if popo.hours.length > 0 %>
         <p><b>Hours:</b> <%= popo.hours %></p>
       <% else %>
         <p><b>Hours:</b> <%= popo.hours_type %></p>
       <% end %>
 
-      <% if popo.accessibility %>
+      <% if popo.accessibility.length > 0 %>
         <p><b>Accessibility:</b> <%= popo.accessibility %></p>
       <% end %>
-      <p><b>Description:</b><br><%= popo.description %></p>
+
+      <% if popo.description.length > 0 %>
+        <p><b>Description:</b><br><%= popo.description %></p>
+      <% end %>
 
     </div>
   </div>

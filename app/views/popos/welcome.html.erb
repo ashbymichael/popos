@@ -7,20 +7,22 @@
   <a href="#view-anchor" class="mui-btn mui-btn--primary">Find the POPOs</a>
 </div>
 
-<div class="views-container">
-  <div><button class="mui-btn mui-btn--flat" id="view-switcher-button">view as list</button></div>
+<!-- <div class="views-container"> -->
+  <div>
+    <button class="mui-btn mui-btn--flat" id="view-switcher-button">view as list</button>
+  </div>
   <div id="loading" class="mui--text-center">
     Loading...
   </div>
-  <div id="view-anchor">
+  <!-- <div id="view-anchor"> -->
     <div id="list-view" style="display:none">
       <%= paginate @popos %>
       <%= render 'popo_info' %>
       <%= paginate @popos %>
     </div>
     <div id="map"></div>
-  </div>
-</div>
+  <!-- </div> -->
+<!-- </div> -->
 
 <script id="info-window-template" type="text/x-handlebars-template">
   <div id="info-window">
