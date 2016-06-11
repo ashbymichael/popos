@@ -68,6 +68,26 @@ $(document).on("page:change", function () {
       $('#list-view').toggle();
     }
 
+    var viewPage = function(e) {
+      e.preventDefault();
+      console.log($(this).attr('href'));
+
+      // $('#list-view').load($(this).attr('href'));
+
+      var req = $.ajax({
+        url: $(this).attr('href')
+      });
+
+      req.done(function(res){
+        // var x = $($.parseHTML(res)).filter('#list-view');
+        var x = $($.parseHTML(res)).filter('#list-view');
+        // var x = x.filter('#view-anchor');
+        // var y = $($.parseHTML(x)).filter('#list-view');
+        console.log(x.html());
+        $('#list-view').html(x.html());
+      })
+    }
+
     var styleInfoWindow = function() {
           // Reference to the DIV which receives the contents of the infowindow using jQuery
           var iwOuter = $('.gm-style-iw');
@@ -172,6 +192,7 @@ $(document).on("page:change", function () {
 
     //Listeners
     $('#view-switcher-button').click(switchViews);
+    $('.page a').click(viewPage);
 
     // button.addEventListener("click", getUserLocation);
 })

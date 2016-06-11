@@ -18,10 +18,7 @@ class PoposController < ApplicationController
   end
 
   def index
-    @popos = sort_popos_by_distance
-    p "*" * 100
-    p @popos
-
+    
   end
 
   def map_markers
