@@ -70,22 +70,11 @@ $(document).on("page:change", function () {
 
     var viewPage = function(e) {
       e.preventDefault();
-      console.log($(this).attr('href'));
-
-      // $('#list-view').load($(this).attr('href'));
-
-      var req = $.ajax({
+      $.ajax({
         url: $(this).attr('href')
+      }).done(function(res){
+        $('#list-view').html($($.parseHTML(res)).filter('#list-view').html());
       });
-
-      req.done(function(res){
-        // var x = $($.parseHTML(res)).filter('#list-view');
-        var x = $($.parseHTML(res)).filter('#list-view');
-        // var x = x.filter('#view-anchor');
-        // var y = $($.parseHTML(x)).filter('#list-view');
-        console.log(x.html());
-        $('#list-view').html(x.html());
-      })
     }
 
     var styleInfoWindow = function() {
@@ -192,7 +181,6 @@ $(document).on("page:change", function () {
 
     //Listeners
     $('#view-switcher-button').click(switchViews);
-    // $('body a').click(viewPage);
     $(document.body).on('click', '.pagination a', viewPage);
 
     // button.addEventListener("click", getUserLocation);
