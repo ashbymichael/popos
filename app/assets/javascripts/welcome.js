@@ -192,7 +192,8 @@ $(document).on("page:change", function () {
 
     //Listeners
     $('#view-switcher-button').click(switchViews);
-    $('.page a').click(viewPage);
+    // $('body a').click(viewPage);
+    $(document.body).on('click', '.pagination a', viewPage);
 
     // button.addEventListener("click", getUserLocation);
 })
